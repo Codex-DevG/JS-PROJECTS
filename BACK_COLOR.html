@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND COLOUR CHANGER</title>
+    <style>
+    body{
+      margin: 0px;
+      padding: 20px 100px;
+    }
+
+    h1{
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    p{
+      font-size: 18px;
+      text-align: justify
+    }
+  .btn{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: solid black 2px;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+
+  #white{
+    background-color: white;
+  }
+  #aqua{
+    background-color: aquamarine;
+  }
+  #violet{
+    background-color: violet;
+  }
+  #black
+  {
+    background-color: black;
+
+  }
+    </style>
+  </head>
+  <body>
+  <div id="color-switcher">
+    <span class="btn" id="white" onclick="changebg('#ffffff')"></span>
+    <span class="btn" id="aqua" onclick="changebg('#7fffd4')"></span>
+    <span class="btn" id="violet" onclick="changebg('#ce9aff')"></span>
+    <span class="btn" id="black" onclick="changebg('#000000')"></span>
+
+  </div>
+  <h1 class="text">ABOUT US</h1>
+  <img src="D:\best-about-us-pages.jpg" alt="ABOUT US"/>
+  <p class="text">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.
+
+Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin.
+
+Versions of the Lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets.[1] Lorem ipsum was introduced to the digital world in the mid-1980s, when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors, including Pages and Microsoft Word, have since adopted Lorem ipsum,[2] as have many LaTeX packages,[3][4][5] web content managers such as Joomla! and WordPress, and CSS libraries such as Semantic UI.[6]</p>
+
+
+<script>
+
+function changebg(color)
+{
+  document.body.style.backgroundColor= color;
+  let txt = document.getElementsByClassName("text")
+  let button = document.getElementsByClassName("btn")
+  if(color == "#000000")
+  {
+    for(let elm of txt){
+      elm.style.color = "white";
+    }
+
+    for(let elm of button)
+    {
+        elm.style.border ="2px solid white"
+    }
+
+  }
+  else{
+    for (let elm of txt)
+    {
+      elm.style.color ="black";
+    }
+
+    for(let elm of button)
+    {
+        elm.style.border ="2px solid black"
+    }
+
+  }
+}
+</script>
+  </body>
+</html>
